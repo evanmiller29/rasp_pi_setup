@@ -60,7 +60,8 @@ sudo apt install nordvpn -y
 nordvpn login
 # Make sure that nordvnp connect is added to restart script
 # @reboot nordvpn connect
-crontab -e
+# Check, doesn't seem to start VPN up
+sudo nano /etc/rc.local
 
 ################################
 ############ Deluge ############
