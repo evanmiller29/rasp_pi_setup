@@ -2,7 +2,7 @@ sudo apt update
 sudo apt autoclean
 
 cd ..
-mkdir installed_shiz
+mkdir installed_shiz -p
 cd installed_shiz
 
 ################################
@@ -46,8 +46,12 @@ nordvpn login
 # @reboot nordvpn connect
 # Check, doesn't seem to start VPN up
 sudo nano /etc/rc.local
+sudo nano /home/pi/.bashrc
+
+cd ..
 
 ################################
-########### NordVPN ############
+########### Arduino ############
 ################################
 
+mkdir arduino -p

@@ -3,7 +3,7 @@ sudo apt autoclean
 
 cd ..
 mkdir installed_shiz
-cd installed_shiz
+cd installed_shiz -p
 
 ################################
 ###### HEROES MOTHERUCKER ######
@@ -62,6 +62,9 @@ nordvpn login
 # @reboot nordvpn connect
 # Check, doesn't seem to start VPN up
 sudo nano /etc/rc.local
+sudo nano /home/pi/.bashrc
+
+cd ..
 
 ################################
 ############ Deluge ############
