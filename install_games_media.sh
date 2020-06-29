@@ -71,3 +71,28 @@ cd ..
 ################################
 
 sudo apt-get install deluge -y
+
+################################
+##### Red alert (Open RA) ######
+################################
+# https://github.com/OpenRA/OpenRA/wiki/OpenRA-on-RaspberryPi
+
+mkdir openRA -p
+
+
+sudo apt install apt-transport-https dirmngr gnupg ca-certificates -y
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF
+echo "deb https://download.mono-project.com/repo/debian stable-raspbianbuster main" | sudo tee /etc/apt/sources.list.d/mono-official-stable.list
+sudo apt update
+
+sudo apt install mono-devel libfreetype6 libopenal1 liblua5.1-0 libsdl2-2.0-0 xdg-utils zenity wget -y
+cd OpenRA
+
+wget https://github.com/OpenRA/OpenRA/releases/download/release-20200503/OpenRA-release-20200503-source.tar.bz2
+tar xvjf /home/pi/Desktop/installed_shiz/openRA/OpenRA-release-20200503-source.tar.bz2
+make
+
+# To run go to openRA directory and run:
+# sudo sh launch-game.sh
+
+cd ..
